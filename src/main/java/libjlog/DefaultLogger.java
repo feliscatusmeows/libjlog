@@ -7,7 +7,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
 public class DefaultLogger implements Logger {
-    static final  DateFormat  df    = new SimpleDateFormat("y-M-u H:m:s.S");
+    static final  DateFormat  df    = new SimpleDateFormat("y-M-d H:m:s.S");
     private final String      prefix;
     boolean termSupportsTruecolor = true;
     boolean usePrefix             = true;
