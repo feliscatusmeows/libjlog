@@ -5,9 +5,14 @@ public interface LoggerTheme {
         return Math.min(1f, Math.max(in, 0f));
     }
 
+    /**
+     * Returns the default theme
+     *
+     * @return The default theme
+     */
     static LoggerTheme getDefault() {
         return new LoggerTheme() {
-            @Override public ThemeEntry getNormal() {
+            @Override public ThemeEntry getInfo() {
                 return new ThemeEntry(1, 1, 1);
             }
 
@@ -25,14 +30,37 @@ public interface LoggerTheme {
         };
     }
 
-    ThemeEntry getNormal();
+    /**
+     * Returns the info color
+     *
+     * @return The info color
+     */
+    ThemeEntry getInfo();
 
+    /**
+     * Returns the warning color
+     *
+     * @return The warning color
+     */
     ThemeEntry getWarn();
 
+    /**
+     * Returns the error color
+     *
+     * @return The error color
+     */
     ThemeEntry getError();
 
+    /**
+     * Returns the debug color
+     *
+     * @return The debug color
+     */
     ThemeEntry getDebug();
 
+    /**
+     * An entry describing an RGB color with 3 values
+     */
     record ThemeEntry(float red, float green, float blue) {
         @Override public float red() {
             return ensureColorIsValid(red);
