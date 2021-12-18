@@ -25,7 +25,7 @@ logger.error("Something terribly just happened.")
 logger.debug("Breakpoint 1");
 ```
 
-It is not recommended to make multiple instances of the same logger. While it will not cause any issues, it is generally a bad practise to do so.
+It is not recommended to make multiple instances of the same logger. While it will not cause any issues, it is generally a bad practice to do so.
 
 ## Support
 If you find any bugs or have feature suggestions, feel free to open an issue.
